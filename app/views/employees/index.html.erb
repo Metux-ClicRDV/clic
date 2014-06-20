@@ -11,71 +11,18 @@
         <div class="tab-content">
           <div class="tab-pane active" id="home">
               
+            <% @employees.each do |emp| %>
+
             <div class="col-lg-2 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="single.html" data-toggle="modal" data-target="#myModal">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <img class="img-responsive" src=" <%= emp.img_url %> ">
                     <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placekitten.com/150/200/">
-                    <div class="name">
-                        Julien COLLET
+                        <%= emp.name%>
                     </div>
                 </a>
             </div>
 
+            <% end %>
           </div>
           <div class="tab-pane" id="profile">
               
