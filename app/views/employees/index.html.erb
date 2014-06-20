@@ -1,4 +1,4 @@
-<div id="homepage" class="container" style="">
+<div id="homepage" class="container" ng-controller="IndexCtrl">
 
     <div class="row">
 
@@ -10,21 +10,17 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane active" id="home">
-              
-            <% @employees.each do |emp| %>
 
-            <div class="employee col-lg-2 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="single.html" data-toggle="modal" data-target="#myModal">
+            <div ng-repeat="employee in employees" ng-click="handleClick(employee)" ng-model="employee" class="employee col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-toggle="modal" data-target="#myModal">
                     <div class="photo">
-                      <img class="img-responsive" src=" <%= emp.img_url %> ">
+                      <img class="img-responsive" src="{{ employee.img_url }}">
                     </div>
                     <div class="name">
-                        <%= emp.name%>
+                        {{ employee.name }}
                     </div>
                 </a>
             </div>
-
-            <% end %>
           </div>
           <div class="tab-pane" id="profile">
               
@@ -71,17 +67,33 @@
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" ng-controller="ModalCtrl">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title"></h4>
+        <h4 class="modal-title">{{ profil.name }}</h4>
       </div>
       <div class="modal-body">
-        <img src="http://placekitten/650/800" alt="">
+        <div class="profil-photo">
+          <img ng-src="{{ profil.img_url }}" alt="">
+        </div>
+        <div class="profil-alias">
+        Alias : {{ profil.alias }}
+        </div>
+        <div class="profil-birthday">
+        Birthday : {{ profil.birthday }}
+        </div>
+        <div class="profil-email">
+        Email : {{ profil.email }}
+        </div>
+        <div class="profil-role">
+          Role : {{ profil .role }}
+        </div>
+        <div class="profil-ilike">
+          I Like : {{ profil.ilike }}
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
