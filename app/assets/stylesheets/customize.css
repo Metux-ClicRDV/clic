@@ -33,7 +33,7 @@ header h2{word-spacing: 80px;}
 .modal-body{text-align: center; font-size: 16px;}
 .modal-body div{margin-bottom: 10px;}
 .modal-title{font-size: 30px;}
-.profil-photo{text-align: center; }
+.profil-photo{text-align: center; overflow: hidden;}
 
 footer{margin-bottom: 0; text-align: center;}
 body{margin-top: 0;}
