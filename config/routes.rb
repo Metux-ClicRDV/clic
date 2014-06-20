@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :high_scores
+  resources :employees
 
   get 'greetings/hello'
 
