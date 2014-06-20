@@ -1,37 +1,121 @@
-<h1>Listing employees</h1>
+<div id="homepage" class="container" style="">
 
-<table>
-  <thead>
-    <tr>
-      <th>Img url</th>
-      <th>Name</th>
-      <th>Alias</th>
-      <th>Birthday</th>
-      <th>Email</th>
-      <th>Role</th>
-      <th>Ilike</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="row">
 
-  <tbody>
-    <% @employees.each do |employee| %>
-      <tr>
-        <td><%= employee.img_url %></td>
-        <td><%= employee.name %></td>
-        <td><%= employee.alias %></td>
-        <td><%= employee.birthday %></td>
-        <td><%= employee.email %></td>
-        <td><%= employee.role %></td>
-        <td><%= employee.ilike %></td>
-        <td><%= link_to 'Show', employee %></td>
-        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#home" data-toggle="tab">ClicRDV Gallery</a></li>
+          <li><a href="#profile" data-toggle="tab">Let's hang out!</a></li>
+        </ul>
 
-<br>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="home">
+              
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="single.html" data-toggle="modal" data-target="#myModal">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placekitten.com/150/200/">
+                    <div class="name">
+                        Julien COLLET
+                    </div>
+                </a>
+            </div>
 
-<%= link_to 'New Employee', new_employee_path %>
+          </div>
+          <div class="tab-pane" id="profile">
+              
+            <div class="jumbotron">
+                <h3>Paint Ball !! Le vendredi 27 juin 2014.</h3>
+                <ul>
+                    <li>Apportez tenue salissable</li>
+                    <li>Coût 60 euros l'après-midi</li>
+                </ul>
+                <form action="" class='clearfix'>
+                    <button class="btn btn-success btn-lg pull-right">Votez !</button>
+                </form>
+            </div>
+
+            <div class="jumbotron">
+                <h3>Paint Ball !! Le vendredi 27 juin 2014.</h3>
+                <ul>
+                    <li>Apportez tenue salissable</li>
+                    <li>Coût 60 euros l'après-midi</li>
+                </ul>
+                <form action="" class='clearfix'>
+                    <button class="btn btn-success btn-lg pull-right">Votez !</button>
+                </form>
+            </div>
+             
+            <div class="jumbotron">
+                <h3>Paint Ball !! Le vendredi 27 juin 2014.</h3>
+                <ul>
+                    <li>Apportez tenue salissable</li>
+                    <li>Coût 60 euros l'après-midi</li>
+                </ul>
+                <form action="" class='clearfix'>
+                    <button class="btn btn-success btn-lg pull-right">Votez !</button>
+                </form>
+            </div>
+
+
+          </div>
+        </div>
+
+    </div>
+
+</div>

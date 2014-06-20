@@ -25,11 +25,4 @@ ActiveRecord::Schema.define(version: 20140620082742) do
     t.datetime "updated_at"
   end
 
-  create_table "high_scores", force: true do |t|
-    t.string   "game"
-    t.integer  "score"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
